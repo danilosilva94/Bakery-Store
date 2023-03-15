@@ -52,7 +52,7 @@ require_once('partials-front/nav.php');
 </section>
 <!-- Categories End -->
 
-<!-- Footer Start -->
+<!-- Pastry Menu Start -->
 <section class="pastry-menu">
     <div class="container">
         <h2 class="text-center text-white">Pastry Menu</h2>
@@ -83,4 +83,11 @@ require_once('partials-front/nav.php');
         <a href="<?php echo SITEURL; ?>pastries.php">See All Pastries</a>
     </h3>
 </section>
+<!-- Pastry Menu End -->
+
+<!-- Footer Start -->
+<?php
+//Required php files
+require_once('partials-front/footer.php');
+?>
 <!-- Footer End -->
