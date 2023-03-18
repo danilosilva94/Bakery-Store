@@ -75,6 +75,101 @@ require_once('partials-front/nav.php');
             <!-- Prevents overlapping -->
             <div class="clearfix"></div>
         </div>
+
+        <div class="pastry-menu-box">
+            <div class="pastry-menu-img">
+                <img src="" alt="">
+            </div>
+
+            <div class="pastry-menu-desc">
+                <h4>Title</h4>
+                <p class="pastry-price">£</p>
+                <p class="pastry-detail">
+                    Description
+                </p>
+                <br>
+
+                <a href="">Pastry Link</a>
+            </div>
+            <!-- Prevents overlapping -->
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="pastry-menu-box">
+            <div class="pastry-menu-img">
+                <img src="" alt="">
+            </div>
+
+            <div class="pastry-menu-desc">
+                <h4>Title</h4>
+                <p class="pastry-price">£</p>
+                <p class="pastry-detail">
+                    Description
+                </p>
+                <br>
+
+                <a href="">Pastry Link</a>
+            </div>
+            <!-- Prevents overlapping -->
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="pastry-menu-box">
+            <div class="pastry-menu-img">
+                <img src="" alt="">
+            </div>
+
+            <div class="pastry-menu-desc">
+                <h4>Title</h4>
+                <p class="pastry-price">£</p>
+                <p class="pastry-detail">
+                    Description
+                </p>
+                <br>
+
+                <a href="">Pastry Link</a>
+            </div>
+            <!-- Prevents overlapping -->
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="pastry-menu-box">
+            <div class="pastry-menu-img">
+                <img src="" alt="">
+            </div>
+
+            <div class="pastry-menu-desc">
+                <h4>Title</h4>
+                <p class="pastry-price">£</p>
+                <p class="pastry-detail">
+                    Description
+                </p>
+                <br>
+
+                <a href="">Pastry Link</a>
+            </div>
+            <!-- Prevents overlapping -->
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="pastry-menu-box">
+            <div class="pastry-menu-img">
+                <img src="" alt="">
+            </div>
+
+            <div class="pastry-menu-desc">
+                <h4>Title</h4>
+                <p class="pastry-price">£</p>
+                <p class="pastry-detail">
+                    Description
+                </p>
+                <br>
+
+                <a href="">Pastry Link</a>
+            </div>
+            <!-- Prevents overlapping -->
+            <div class="clearfix"></div>
+        </div>
         <!-- Prevents overlapping -->
         <div class="clearfix"></div>
     </div>
