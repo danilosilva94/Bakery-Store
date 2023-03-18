@@ -118,9 +118,17 @@ h3 a:hover{
 }
 
 /* Css for navbar */
+.navbar{
+    background-color: #c4c4c4;
+}
+
 .logo{
     width: 10%;
     float: left; /* Image ignores borders... Floats in front of other elements */
+}
+
+.logo img{
+    border-radius: 30px;
 }
 
 .menu{
