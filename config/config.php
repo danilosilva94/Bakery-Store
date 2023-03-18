@@ -20,9 +20,9 @@
 
     //Connect to database
     try{
-        $conn = new PDO('mysql:host='.LOCALHOST.';dbname='.DB_NAME, DB_USERNAME, DB_PASSWORD);
+        $con = new PDO('mysql:host='.LOCALHOST.';dbname='.DB_NAME, DB_USERNAME, DB_PASSWORD);
         //Set PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e){
         echo "Connection failed: " . $e->getMessage();
     }

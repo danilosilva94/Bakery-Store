@@ -68,7 +68,7 @@ a{
 h2{
     color: #f19066;
     font-size: 2rem;
-    margin-bottom: 7%;
+    margin-bottom: 1%;
     text-shadow: 1px 1px black;
 }
 
@@ -92,6 +92,10 @@ h3 a:hover{
     position: absolute; /* Will remain in place even if infront of other elements */
     bottom: 50px;
     left: 40%;
+    font-size: 3.2rem;
+    text-shadow: 3px 2px black;
+    color: white;
+    margin-left: -8%;
 }
 
 .fieldset{
@@ -303,12 +307,17 @@ p a:hover{
     }
 
     h2{
-        margin-bottom: 12%;
+        margin-bottom: 1%;
+    }
+
+    .float-text{
+        font-size: 2rem;
+        margin-left: -18%;
     }
 
     .box-3{
-        width: 100%;
-        margin: 4% auto;
+        width: 30%;
+        margin: 4% 1.5%;
     }
 
     .pastry-menu{
