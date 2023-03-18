@@ -19,7 +19,7 @@
 <!-- Footer -->
 <section class="footer">
     <div class="container text-center">
-        <p>All rights reserved. Designed by <a href="https://www.linkedin.com/in/danilo-da-silva-73629217b/">Danilo da Silva</a></p>
+        <p>All rights reserved. Designed by <a href="https://www.linkedin.com/in/danilo-da-silva-73629217b/">Danilo da Silva</a> &copy; <?php echo date("Y"); ?></p>
     </div>
 </section>
 <!-- Footer End -->

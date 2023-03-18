@@ -21,7 +21,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.php">
-                    <img src="images/logo/logo.png" alt="Clohda's Cakes" class="img-responsive">
+                    <img src="assets/logo/logo.png" alt="Clohda's Cakes" class="img-responsive">
                 </a>
             </div>
 

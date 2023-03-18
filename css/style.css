@@ -1,0 +1,323 @@
+/*
+    Author: Danilo da Silva;
+    Theme: Bakery;
+    Version: 1.0;
+*/
+
+/* Css for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto; /* centralize the content */
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.img-curved{
+    border-radius: 15px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    background-color: #e15f41;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #f19066;
+}
+
+h2{
+    color: #f19066;
+    font-size: 2rem;
+    margin-bottom: 7%;
+    text-shadow: 1px 1px black;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h3 a{
+    text-shadow: 1px 1px black;
+}
+
+h3 a:hover{
+    color: #e15f41;
+}
+
+.float-container{
+    position: relative; /* Can be moved with ex: right: 10px from its relative position */
+}
+
+.float-text{
+    position: absolute; /* Will remain in place even if infront of other elements */
+    bottom: 50px;
+    left: 40%;
+}
+
+.fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+.text-white{
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.success{
+    color: #546de5;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.error{
+    color: #c44569;
+    padding: 2%;
+}
+
+/* Css for navbar */
+.logo{
+    width: 10%;
+    float: left; /* Image ignores borders... Floats in front of other elements */
+}
+
+.menu{
+    line-height: 100px; /* Bring menu line down from top of page */
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline; /* Display inline so they are next to each other */
+    padding: 1%;
+    margin: 1% 1%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #e15f41;
+    text-shadow: 1px 1px black;
+    border-radius: 15px;
+}
+
+.menu ul li:hover{
+    background-color: #f19066;
+}
+
+/* Css for pastry search */
+.pastry-search{
+    background-image: url(../assets/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.pastry-search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Css for categories */
+.categories{
+    padding: 4% 0;
+}
+
+.box-3{
+    width: 28%;
+    float: left; /* Float all in same line */
+    margin: 2%;
+}
+
+.category-hover:hover{
+    color: #e15f41;
+}
+
+/* Css for pastry menu */
+.pastry-menu{
+    padding: 4% 0;
+    background-color: #c4c4c4;
+}
+
+.pastry-menu-box{
+    width: 48%;
+    margin: 1%;
+    float: left;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.pastry-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.pastry-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.pastry-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.pastry-detail{
+    font-size: 1rem;
+    color: #596275;
+}
+
+/* Css for social */
+.social ul{
+    list-style-type: none;
+}
+
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+p a{
+    color: #f19066;
+    text-shadow: 1px 1px black;
+}
+
+p a:hover{
+    color: #e15f41;
+}
+
+/* for Order Section */
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+/* Css for mobile site */
+@media only screen and (max-width: 768px){
+    .logo{
+        width: 45%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu{
+        line-height: 50px;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .menu ul li{
+        font-size: 25px;
+        background-color: #e15f41;
+        border-radius: 15px;
+        margin: 1% 2%;
+    }
+
+    .pastry-search input[type="search"]{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btn{
+        width: 90%;
+        padding: 2%;
+    }
+
+    .pasty-search{
+        padding: 10% 0;
+    }
+
+    .categories{
+        padding: 3% 0;
+    }
+
+    h2{
+        margin-bottom: 12%;
+    }
+
+    .box-3{
+        width: 100%;
+        margin: 4% auto;
+    }
+
+    .pastry-menu{
+        padding: 3% 0;
+    }
+
+    .pastry-menu-box{
+        width: 97%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+
+    .social{
+        padding: 5% 0;
+    }
+
+    .order{
+        width: 100%;
+    }
+}
