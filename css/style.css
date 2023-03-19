@@ -198,6 +198,7 @@ h3 a:hover{
 }
 
 .pastry-menu-box{
+    display: flex;
     width: 48%;
     margin: 1%;
     float: left;
@@ -212,6 +213,8 @@ h3 a:hover{
 }
 
 .pastry-menu-desc{
+    height: 150px; /* set a fixed height for the description box */
+    flex: 1; /* make the box stretch to the full height of its parent */
     width: 70%;
     float: left;
     margin-left: 8%;
@@ -284,7 +287,7 @@ p a:hover{
         font-size: 25px;
         background-color: #e15f41;
         border-radius: 15px;
-        margin: 1% 2%;
+        margin: 1% 1%;
     }
 
     .pastry-search input[type="search"]{
