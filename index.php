@@ -75,119 +75,64 @@ require_once('partials-front/nav.php');
     <div class="container">
         <h2 class="text-center text-white">Pastry Menu</h2>
 
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
+        <?php
+            //Sql query to get all the pastries from database
+            $query = $con->prepare("SELECT * FROM tbl_pastry WHERE active='Yes' AND featured='Yes' LIMIT 6");
 
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
+            //Execute the query
+            $query->execute();
 
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
+            //Count the rows
+            $count = $query->rowCount();
 
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
+            //Check whether the pastry is available or not
+            if($count > 0){
+                //Itearte through the pastries with while loop
+                while($row = $query->fetch()){
+                    //Get details
+                    $id = $row['id'];
+                    $title = $row['title'];
+                    $price = $row['price'];
+                    $description = $row['description'];
+                    $image_name = $row['image_name'];
 
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
+                    ?>
+                    <div class="pastry-menu-box">
+                        <div class="pastry-menu-img">
+                            <?php
+                                //Check if image is available or not
+                                if($image_name == ""){
+                                    //Display the message
+                                    echo "<div class='error'>Image not available!</div>";
+                                } else {
+                                    //Display the image
+                                    ?>
+                                    <img src="<?php echo SITEURL; ?>assets/images/pastries/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curved">
+                                    <?php
+                                }
+                            ?>
+                        </div>
+                        
+                        <div class="pastry-menu-desc">
+                            <h4><?php echo $title; ?></h4>
+                            <p class="pastry-price">€<?php echo $price; ?></p>
+                            <p class="pastry-detail">
+                                <?php echo $description; ?>
+                            </p>
+                            <br>
 
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
+                            <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order Now!</a>
+                        </div>
 
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
-
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
-
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
-
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
-
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
-
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
-
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="pastry-menu-box">
-            <div class="pastry-menu-img">
-                <img src="" alt="">
-            </div>
-
-            <div class="pastry-menu-desc">
-                <h4>Title</h4>
-                <p class="pastry-price">£</p>
-                <p class="pastry-detail">
-                    Description
-                </p>
-                <br>
-
-                <a href="">Pastry Link</a>
-            </div>
-            <!-- Prevents overlapping -->
-            <div class="clearfix"></div>
-        </div>
+                        <dv class="clearfix"></dv>
+                    </div>
+                    <?php
+                }
+            } else{
+                //Display the message
+                echo "<div class='error'>No Pastries Available!</div>";
+            }
+        ?>
         <!-- Prevents overlapping -->
         <div class="clearfix"></div>
     </div>
