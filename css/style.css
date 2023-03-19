@@ -91,7 +91,7 @@ h3 a:hover{
 .float-text{
     position: absolute; /* Will remain in place even if infront of other elements */
     bottom: 50px;
-    left: 40%;
+    left: 30%;
     font-size: 3.2rem;
     text-shadow: 3px 2px black;
     color: white;
