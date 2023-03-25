@@ -2,16 +2,11 @@
     require_once('partials-front/nav.php');
 ?>
 
-<!-- Pastry Search Start -->
-<section class="pastry-search text-center">
-    <div class="container">
-        <form action="<?php echo SITEURL; ?>pastry-search.php" method="POST">
-            <input type="search" name="search" placeholder="Search for Pastries..." required>
-            <input type="submit" name="submit" value="Search" class="btn btn-primary">
-        </form>
-    </div>
-</section>
-<!-- Pastry Search End -->
+<!-- Search Start -->
+<?php
+    require_once('partials-front/pastry-search.php');
+?>
+<!-- Search End -->
 
 <!-- Pastry Menu Start -->
 <section class="pastry-menu">
