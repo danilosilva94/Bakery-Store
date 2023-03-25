@@ -231,6 +231,10 @@ h3 a:hover{
 }
 
 /* Css for social */
+.social{
+    margin: 1% 0;
+}
+
 .social ul{
     list-style-type: none;
 }
