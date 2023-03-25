@@ -12,84 +12,87 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.container{
+.container {
     width: 80%;
-    margin: 0 auto; /* centralize the content */
+    margin: 0 auto;
+    /* centralize the content */
 }
 
-.img-responsive{
+.img-responsive {
     width: 100%;
 }
 
-.img-curved{
+.img-curved {
     border-radius: 15px;
 }
 
-.text-right{
+.text-right {
     text-align: right;
 }
 
-.text-left{
+.text-left {
     text-align: left;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.clearfix{
+.clearfix {
     clear: both;
     float: none;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-.btn{
+.btn {
     padding: 1%;
     border: none;
     font-size: 1rem;
     border-radius: 10px;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #e15f41;
     color: white;
     cursor: pointer;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     color: white;
     background-color: #f19066;
 }
 
-h2{
+h2 {
     color: #f19066;
     font-size: 2rem;
     margin-bottom: 1%;
     text-shadow: 1px 1px black;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
 }
 
-h3 a{
+h3 a {
     text-shadow: 1px 1px black;
 }
 
-h3 a:hover{
+h3 a:hover {
     color: #e15f41;
 }
 
-.float-container{
-    position: relative; /* Can be moved with ex: right: 10px from its relative position */
+.float-container {
+    position: relative;
+    /* Can be moved with ex: right: 10px from its relative position */
 }
 
-.float-text{
-    position: absolute; /* Will remain in place even if infront of other elements */
+.float-text {
+    position: absolute;
+    /* Will remain in place even if infront of other elements */
     bottom: 50px;
     left: 30%;
     font-size: 3.2rem;
@@ -98,53 +101,57 @@ h3 a:hover{
     margin-left: -8%;
 }
 
-.fieldset{
+.fieldset {
     border: 1px solid white;
     margin: 5%;
     padding: 3%;
     border-radius: 5px;
 }
 
-.text-white{
+.text-white {
     color: white;
     text-shadow: 1px 1px black;
 }
 
-.success{
+.success {
     color: #546de5;
     padding: 2%;
     font-weight: bold;
 }
 
-.error{
+.error {
     color: #c44569;
     padding: 2%;
+    font-weight: bold;
 }
 
 /* Css for navbar */
-.navbar{
+.navbar {
     background-color: #c4c4c4;
 }
 
-.logo{
+.logo {
     width: 10%;
-    float: left; /* Image ignores borders... Floats in front of other elements */
+    float: left;
+    /* Image ignores borders... Floats in front of other elements */
 }
 
-.logo img{
+.logo img {
     border-radius: 30px;
 }
 
-.menu{
-    line-height: 100px; /* Bring menu line down from top of page */
+.menu {
+    line-height: 100px;
+    /* Bring menu line down from top of page */
 }
 
-.menu ul{
+.menu ul {
     list-style-type: none;
 }
 
-.menu ul li{
-    display: inline; /* Display inline so they are next to each other */
+.menu ul li {
+    display: inline;
+    /* Display inline so they are next to each other */
     padding: 1%;
     margin: 1% 1%;
     font-weight: bold;
@@ -155,12 +162,12 @@ h3 a:hover{
     border-radius: 15px;
 }
 
-.menu ul li:hover{
+.menu ul li:hover {
     background-color: #f19066;
 }
 
 /* Css for pastry search */
-.pastry-search{
+.pastry-search {
     background-image: url(../assets/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -168,7 +175,7 @@ h3 a:hover{
     padding: 7% 0;
 }
 
-.pastry-search input[type="search"]{
+.pastry-search input[type="search"] {
     width: 50%;
     padding: 1%;
     font-size: 1rem;
@@ -176,28 +183,107 @@ h3 a:hover{
     border-radius: 10px;
 }
 
+.search-results {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 45%;
+    max-height: 145px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-result-item-img {
+    width: 7%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.search-result-item-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150%;
+    /* Adjust this width as needed */
+    color: black;
+}
+
+.search-result-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    width: 30%;
+    /* Adjust this width as needed */
+    text-align: right;
+    color: black;
+}
+
+.search-results hr {
+    border-top: 1px solid black;
+    /* Change the color value as needed */
+}
+
+.search-result-item:hover {
+    background-color: #f19066;
+    cursor: pointer;
+}
+
+/* Custom scrollbar styles for the search-results div */
+.search-results::-webkit-scrollbar {
+    width: 10px;
+    /* Change the width as needed */
+}
+
+.search-results::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Change the background color as needed */
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Change the color as needed */
+    border-radius: 5px;
+    /* Change the border-radius as needed */
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Change the hover color as needed */
+}
+
 /* Css for categories */
-.categories{
+.categories {
     padding: 4% 0;
 }
 
-.box-3{
+.box-3 {
     width: 28%;
-    float: left; /* Float all in same line */
+    float: left;
+    /* Float all in same line */
     margin: 2%;
 }
 
-.category-hover:hover{
+.category-hover:hover {
     color: #e15f41;
 }
 
 /* Css for pastry menu */
-.pastry-menu{
+.pastry-menu {
     padding: 4% 0;
     background-color: #c4c4c4;
 }
 
-.pastry-menu-box{
+.pastry-menu-box {
     display: flex;
     width: 48%;
     margin: 1%;
@@ -207,58 +293,61 @@ h3 a:hover{
     border-radius: 15px;
 }
 
-.pastry-menu-img{
+.pastry-menu-img {
     width: 30%;
     float: left;
 }
 
-.pastry-menu-desc{
-    height: 150px; /* set a fixed height for the description box */
-    flex: 1; /* make the box stretch to the full height of its parent */
+.pastry-menu-desc {
+    height: 150px;
+    /* set a fixed height for the description box */
+    flex: 1;
+    /* make the box stretch to the full height of its parent */
     width: 70%;
     float: left;
     margin-left: 8%;
 }
 
-.pastry-price{
+.pastry-price {
     font-size: 1.2rem;
     margin: 2% 0;
 }
 
-.pastry-detail{
+.pastry-detail {
     font-size: 1rem;
     color: #596275;
 }
 
 /* Css for social */
-.social{
+.social {
     margin: 1% 0;
 }
 
-.social ul{
+.social ul {
     list-style-type: none;
 }
 
-.social ul li{
+.social ul li {
     display: inline;
     padding: 1%;
 }
 
-p a{
+p a {
     color: #f19066;
     text-shadow: 1px 1px black;
 }
 
-p a:hover{
+p a:hover {
     color: #e15f41;
 }
 
 /* for Order Section */
-.order{
+.order {
     width: 50%;
     margin: 0 auto;
 }
-.input-responsive{
+
+.input-responsive {
     width: 96%;
     padding: 1%;
     margin-bottom: 3%;
@@ -266,82 +355,138 @@ p a:hover{
     border-radius: 5px;
     font-size: 1rem;
 }
-.order-label{
-    margin-bottom: 1%; 
+
+.order-label {
+    margin-bottom: 1%;
     font-weight: bold;
 }
 
 /* Css for mobile site */
-@media only screen and (max-width: 768px){
-    .logo{
+@media only screen and (max-width: 768px) {
+    .logo {
         width: 45%;
         float: none;
         margin: 1% auto;
     }
 
-    .menu{
+    .menu {
         line-height: 50px;
     }
 
-    .menu ul{
+    .menu ul {
         text-align: center;
     }
 
-    .menu ul li{
+    .menu ul li {
         font-size: 25px;
         background-color: #e15f41;
         border-radius: 15px;
         margin: 1% 1%;
     }
 
-    .pastry-search input[type="search"]{
+    .pastry-search input[type="search"] {
         width: 90%;
         padding: 2%;
         margin-bottom: 3%;
     }
 
-    .btn{
+    .btn {
         width: 90%;
         padding: 2%;
     }
 
-    .pasty-search{
+    .pasty-search {
         padding: 10% 0;
     }
 
-    .categories{
+    .search-results {
+        position: absolute;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 72%;
+        max-height: 145px;
+        overflow-y: auto;
+        background-color: white;
+        border-radius: 15px;
+        color: black;
+    }
+    
+    .search-result-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .search-result-item-img {
+        width: 7%;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    
+    .search-result-item-title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        width: 150%;
+        /* Adjust this width as needed */
+        color: black;
+    }
+    
+    .search-result-item-price {
+        font-size: 16px;
+        font-weight: bold;
+        width: 30%;
+        /* Adjust this width as needed */
+        text-align: right;
+        color: black;
+    }
+    
+    .search-results hr {
+        border-top: 1px solid black;
+        /* Change the color value as needed */
+    }
+    
+    .search-result-item:hover {
+        background-color: #f19066;
+        cursor: pointer;
+    }
+
+    .categories {
         padding: 3% 0;
     }
 
-    h2{
+    h2 {
         margin-bottom: 1%;
     }
 
-    .float-text{
+    .float-text {
         font-size: 2rem;
         margin-left: -18%;
     }
 
-    .box-3{
+    .box-3 {
         width: 30%;
         margin: 4% 1.5%;
     }
 
-    .pastry-menu{
+    .pastry-menu {
         padding: 3% 0;
     }
 
-    .pastry-menu-box{
+    .pastry-menu-box {
         width: 97%;
         padding: 5%;
         margin-bottom: 5%;
     }
 
-    .social{
+    .social {
         padding: 5% 0;
     }
 
-    .order{
+    .order {
         width: 100%;
     }
 }
