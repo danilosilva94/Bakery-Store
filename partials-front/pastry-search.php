@@ -2,7 +2,7 @@
 <section class="pastry-search text-center">
     <div class="container">
 
-        <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+        <form action="<?php echo SITEURL; ?>display-search-results.php" method="POST">
             <input type="search" class="search" name="search" placeholder="Search for Treats...">
             <input type="submit" name="submit" value="Search" class="btn btn-primary">
         </form>
