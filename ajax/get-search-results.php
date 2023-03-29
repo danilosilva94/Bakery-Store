@@ -28,20 +28,20 @@ if (isset($_POST['term'])) {
             $title = $row['title'];
             $price = $row['price'];
             $image_name = $row['image_name'];
-            
+
             //Add the food to the result
-            $returnResult .= "<a href='".SITEURL."pastry-page.php?pastry_id=".$id."'>
-                "."<div class='search-result-item'>
-                    "."<img src='".SITEURL."assets/images/pastries/".$image_name."' alt='".$title."' class='search-result-item-img img-curved'>"."
-                    "."<p class='search-result-item-title'>".$title."</p>"."
-                    "."<p class='search-result-item-price'>€".$price."</p>"."    
-                </div>"."
+            $returnResult .= "<a href='" . SITEURL . "pastry-page.php?pastry_id=" . $id . "'>
+                " . "<div class='search-result-item'>
+                    " . "<img src='" . SITEURL . "assets/images/pastries/" . $image_name . "' alt='" . $title . "' class='search-result-item-img img-curved'>" . "
+                    " . "<p class='search-result-item-title'>" . $title . "</p>" . "
+                    " . "<p class='search-result-item-price'>€" . $price . "</p>" . "    
+                </div>" . "
             </a><hr>";
         }
 
         //Display the result
         echo $returnResult;
-    } else{
+    } else {
         //No food available
         echo "<div class='error'>Pastry not found!</div>";
     }
