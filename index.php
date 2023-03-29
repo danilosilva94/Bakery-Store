@@ -5,7 +5,7 @@ require_once('partials-front/nav.php');
 
 <!-- Search Start -->
 <?php
-    require_once('partials-front/pastry-search.php');
+require_once('partials-front/pastry-search.php');
 ?>
 <!-- Search End -->
 
@@ -15,49 +15,49 @@ require_once('partials-front/nav.php');
         <h2 class="text-center">Explore Pastries</h2>
 
         <?php
-            //Sql query to get all the categories from database
-            $query = $con->prepare("SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3");
+        //Sql query to get all the categories from database
+        $query = $con->prepare("SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3");
 
-            //Execute the query
-            $query->execute();
+        //Execute the query
+        $query->execute();
 
-            //Count the rows
-            $count = $query->rowCount();
+        //Count the rows
+        $count = $query->rowCount();
 
-            //Check whether the category is available or not
-            if($count > 0){
-                //Itearte through the categories with while loop
-                while($row = $query->fetch()){
-                    //get details of the category
-                    $id = $row['id'];
-                    $title = $row['title'];
-                    $image_name = $row['image_name'];
+        //Check whether the category is available or not
+        if ($count > 0) {
+            //Itearte through the categories with while loop
+            while ($row = $query->fetch()) {
+                //get details of the category
+                $id = $row['id'];
+                $title = $row['title'];
+                $image_name = $row['image_name'];
 
-                    ?>
+        ?>
                 <a href="<?php echo SITEURL; ?>category-pastries.php?category_id=<?php echo $id; ?>">
                     <div class="box-3 float-container">
                         <?php
-                            //Check whether the image is available or not
-                            if($image_name == ""){
-                                //Display the message
-                                echo "<div class='error'>Image not available!</div>";
-                            } else {
-                                //Display the image
-                                ?>
-                                <img src="<?php echo SITEURL; ?>assets/images/category/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curved">
-                                <?php
-                            }
+                        //Check whether the image is available or not
+                        if ($image_name == "") {
+                            //Display the message
+                            echo "<div class='error'>Image not available!</div>";
+                        } else {
+                            //Display the image
+                        ?>
+                            <img src="<?php echo SITEURL; ?>assets/images/category/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curved">
+                        <?php
+                        }
                         ?>
 
                         <h3 class="float-text category-hover"><?php echo $title; ?></h3>
                     </div>
                 </a>
-                <?php
-                }
-            } else{
-                //Display the message
-                echo "<div class='error'>No Categories Available!</div>";
+        <?php
             }
+        } else {
+            //Display the message
+            echo "<div class='error'>No Categories Available!</div>";
+        }
         ?>
         <!-- Prevents overlapping -->
         <div class="clearfix"></div>
@@ -71,62 +71,66 @@ require_once('partials-front/nav.php');
         <h2 class="text-center text-white">Pastry Menu</h2>
 
         <?php
-            //Sql query to get all the pastries from database
-            $query = $con->prepare("SELECT * FROM tbl_pastry WHERE active='Yes' AND featured='Yes' LIMIT 6");
+        //Sql query to get all the pastries from database
+        $query = $con->prepare("SELECT * FROM tbl_pastry WHERE active='Yes' AND featured='Yes' LIMIT 6");
 
-            //Execute the query
-            $query->execute();
+        //Execute the query
+        $query->execute();
 
-            //Count the rows
-            $count = $query->rowCount();
+        //Count the rows
+        $count = $query->rowCount();
 
-            //Check whether the pastry is available or not
-            if($count > 0){
-                //Itearte through the pastries with while loop
-                while($row = $query->fetch()){
-                    //Get details
-                    $id = $row['id'];
-                    $title = $row['title'];
-                    $price = $row['price'];
-                    $description = $row['description'];
-                    $image_name = $row['image_name'];
+        //Check whether the pastry is available or not
+        if ($count > 0) {
+            //Itearte through the pastries with while loop
+            while ($row = $query->fetch()) {
+                //Get details
+                $id = $row['id'];
+                $title = $row['title'];
+                $price = $row['price'];
+                $description = $row['description'];
+                $image_name = $row['image_name'];
 
-                    ?>
-                    <div class="pastry-menu-box">
-                        <div class="pastry-menu-img">
-                            <?php
-                                //Check if image is available or not
-                                if($image_name == ""){
-                                    //Display the message
-                                    echo "<div class='error'>Image not available!</div>";
-                                } else {
-                                    //Display the image
-                                    ?>
-                                    <img src="<?php echo SITEURL; ?>assets/images/pastries/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curved">
-                                    <?php
-                                }
-                            ?>
-                        </div>
-                        
-                        <div class="pastry-menu-desc">
+        ?>
+                <div class="pastry-menu-box">
+                    <div class="pastry-menu-img">
+                        <?php
+                        //Check if image is available or not
+                        if ($image_name == "") {
+                            //Display the message
+                            echo "<div class='error'>Image not available!</div>";
+                        } else {
+                            //Display the image
+                        ?>
+                            <a href="<?php echo SITEURL; ?>pastry-page.php?pastry_id=<?php echo $id; ?>">
+                                <img src="<?php echo SITEURL; ?>assets/images/pastries/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curved">
+                            </a>
+                        <?php
+                        }
+                        ?>
+                    </div>
+
+                    <div class="pastry-menu-desc">
+                        <a href="<?php echo SITEURL; ?>pastry-page.php?pastry_id=<?php echo $id; ?>">
                             <h4><?php echo $title; ?></h4>
                             <p class="pastry-price">€<?php echo $price; ?></p>
                             <p class="pastry-detail">
                                 <?php echo $description; ?>
                             </p>
-                            <br>
+                        </a>
+                        <br>
 
-                            <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order Now!</a>
-                        </div>
-
-                        <dv class="clearfix"></dv>
+                        <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order Now!</a>
                     </div>
-                    <?php
-                }
-            } else{
-                //Display the message
-                echo "<div class='error'>No Pastries Available!</div>";
+
+                    <dv class="clearfix"></dv>
+                </div>
+        <?php
             }
+        } else {
+            //Display the message
+            echo "<div class='error'>No Pastries Available!</div>";
+        }
         ?>
         <!-- Prevents overlapping -->
         <div class="clearfix"></div>

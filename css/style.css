@@ -44,7 +44,6 @@
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -56,18 +55,18 @@ a {
 }
 
 .btn-primary {
-    background-color: #e15f41;
+    background-color: #dc3545;
     color: white;
     cursor: pointer;
 }
 
 .btn-primary:hover {
     color: white;
-    background-color: #f19066;
+    background-color: #333;
 }
 
 h2 {
-    color: #f19066;
+    color: #dc3545;
     font-size: 2rem;
     margin-bottom: 1%;
     text-shadow: 1px 1px black;
@@ -79,10 +78,11 @@ h3 {
 
 h3 a {
     text-shadow: 1px 1px black;
+    color: #fff;
 }
 
 h3 a:hover {
-    color: #e15f41;
+    color: #333;
 }
 
 .float-container {
@@ -145,6 +145,10 @@ h3 a:hover {
     /* Bring menu line down from top of page */
 }
 
+.menu a {
+    color: white;
+}
+
 .menu ul {
     list-style-type: none;
 }
@@ -157,13 +161,13 @@ h3 a:hover {
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
-    background-color: #e15f41;
+    background-color: #dc3545;
     text-shadow: 1px 1px black;
     border-radius: 15px;
 }
 
 .menu ul li:hover {
-    background-color: #f19066;
+    background-color: #333;
 }
 
 /* Css for pastry search */
@@ -234,7 +238,7 @@ h3 a:hover {
 }
 
 .search-result-item:hover {
-    background-color: #f19066;
+    background-color: #c4c4c4;
     cursor: pointer;
 }
 
@@ -308,9 +312,14 @@ h3 a:hover {
     margin-left: 8%;
 }
 
+.pastry-menu-desc h4 {
+    color: #333;
+}
+
 .pastry-price {
     font-size: 1.2rem;
     margin: 2% 0;
+    color: #dc3545;
 }
 
 .pastry-detail {
@@ -333,12 +342,12 @@ h3 a:hover {
 }
 
 p a {
-    color: #f19066;
+    color: #dc3545;
     text-shadow: 1px 1px black;
 }
 
 p a:hover {
-    color: #e15f41;
+    color: #333;
 }
 
 /* for Order Section */
@@ -360,6 +369,99 @@ p a:hover {
     margin-bottom: 1%;
     font-weight: bold;
 }
+
+/* Css for pastry-page */
+/* Styles for the pastry page */
+.pastry-menu-pastry-page {
+    padding: 2% 0;
+}
+
+.container-pastry-page {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 1%;
+}
+
+.text-center-pastry-page {
+    text-align: center;
+    margin-bottom: 5%;
+    color: #dc3545;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.pastry-menu-box-pastry-page {
+    background-color: #fff;
+    height: 515px;
+    padding: 2%;
+    margin-bottom: 3%;
+    border: 1px solid #eee;
+}
+
+.pastry-menu-img-pastry-page {
+    float: left;
+    margin-right: 14%;
+    width: 38%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.img-responsive-img-curved-pastry-page {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.pastry-menu-desc-pastry-page {
+    overflow: hidden;
+}
+
+.pastry-menu-desc-pastry-page h4 {
+    margin: 0 0 1%;
+    font-size: 45px;
+    font-weight: 700;
+    color: #333;
+}
+
+.pastry-price-pastry-page {
+    margin: 0 0 1%;
+    font-size: 45px;
+    font-weight: 700;
+    color: #dc3545;
+}
+
+.pastry-detail-pastry-page {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #777;
+}
+
+.btn-pastry-page {
+    display: inline-block;
+    padding: 3% 15%;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 1%;
+    transition: all 0.3s ease;
+}
+
+.btn-pastry-page:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.error-pastry-page {
+    color: #dc3545;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Css for pastry-page end */
 
 /* Css for mobile site */
 @media only screen and (max-width: 768px) {
@@ -412,20 +514,20 @@ p a:hover {
         border-radius: 15px;
         color: black;
     }
-    
+
     .search-result-item {
         display: flex;
         align-items: center;
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
-    
+
     .search-result-item-img {
         width: 7%;
         object-fit: cover;
         margin-right: 10px;
     }
-    
+
     .search-result-item-title {
         margin: 0;
         font-size: 18px;
@@ -434,7 +536,7 @@ p a:hover {
         /* Adjust this width as needed */
         color: black;
     }
-    
+
     .search-result-item-price {
         font-size: 16px;
         font-weight: bold;
@@ -443,12 +545,12 @@ p a:hover {
         text-align: right;
         color: black;
     }
-    
+
     .search-results hr {
         border-top: 1px solid black;
         /* Change the color value as needed */
     }
-    
+
     .search-result-item:hover {
         background-color: #f19066;
         cursor: pointer;

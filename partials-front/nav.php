@@ -40,9 +40,6 @@
                         <a href="<?php echo SITEURL; ?>pastries.php">Pastries</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>baking-tools.php">Baking Tools</a>
-                    </li>
-                    <li>
                         <a href="<?php echo SITEURL; ?>contact.php">Contact</a>
                     </li>
                 </ul>
