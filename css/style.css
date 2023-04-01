@@ -79,6 +79,7 @@ h3 {
 h3 a {
     text-shadow: 1px 1px black;
     color: #fff;
+    font-size: 2rem;
 }
 
 h3 a:hover {
@@ -93,12 +94,11 @@ h3 a:hover {
 .float-text {
     position: absolute;
     /* Will remain in place even if infront of other elements */
-    bottom: 50px;
+    bottom: 15px;
     left: 30%;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     text-shadow: 3px 2px black;
     color: white;
-    margin-left: -8%;
 }
 
 .fieldset {
@@ -121,7 +121,7 @@ h3 a:hover {
 
 .error {
     color: #c44569;
-    padding: 2%;
+    padding: 3%;
     font-weight: bold;
 }
 
@@ -190,12 +190,11 @@ h3 a:hover {
 }
 
 .search-results {
-    position: absolute;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    transform: translate(55%, 3%);
     z-index: 1;
     width: 45%;
+    min-height: 50px;
     max-height: 145px;
     overflow-y: auto;
     background-color: white;
@@ -222,16 +221,17 @@ h3 a:hover {
     font-weight: bold;
     width: 150%;
     /* Adjust this width as needed */
-    color: black;
+    color: #db3545;
+    text-shadow: 1px 1px #000;
 }
 
 .search-result-item-price {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     width: 30%;
     /* Adjust this width as needed */
     text-align: right;
-    color: black;
+    color: #dc3545;
 }
 
 .search-results hr {
@@ -270,17 +270,25 @@ h3 a:hover {
 /* Css for categories */
 .categories {
     padding: 4% 0;
+    text-align: center; /* add this to center the child divs */
+}
+
+.categories .container {
+    width: 100%; /* increase the width of the parent container */
+    max-width: 1200px; /* add a max-width to ensure the container doesn't get too wide */
+    margin: 0 auto; /* center the container horizontally */
 }
 
 .box-3 {
-    width: 28%;
-    float: left;
-    /* Float all in same line */
-    margin: 2%;
+    width: 25%; /* reduce the width of the child divs */
+    display: inline-block; /* use inline-block instead of float to center the child divs */
+    vertical-align: top; /* align the child divs to the top */
+    margin: 0 2%; /* add some margin between the child divs */
+    text-align: left; /* add this to align the text to the left */
 }
 
 .category-hover:hover {
-    color: #e15f41;
+    color: #dc3545;
 }
 
 /* Css for pastry menu */
@@ -305,28 +313,45 @@ h3 a:hover {
 }
 
 .pastry-menu-desc {
-    height: 150px;
+    
     /* set a fixed height for the description box */
-    flex: 1;
+    
+flex: 1;
     /* make the box stretch to the full height of its parent */
-    width: 70%;
-    float: left;
-    margin-left: 8%;
+    
+width: 100%;
+    
+margin: 1% 1% 1% 1%;
 }
 
 .pastry-menu-desc h4 {
     color: #333;
+    font-size: 25px;
+    text-shadow: 1px 1px #c4c4c4;
+    text-align: center;
+}
+
+.pastry-menu-desc{
+    text-align: center;
+}
+
+.pastry-menu-desc .btn{
+    font-size: 20px;
+    margin: 1% 1% 1% 15%;
 }
 
 .pastry-price {
-    font-size: 1.2rem;
     margin: 2% 0;
     color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
 }
 
 .pastry-detail {
-    font-size: 1rem;
     color: #596275;
+    text-align: center;
+    font-size: 15px;
 }
 
 /* Css for social */
@@ -428,6 +453,7 @@ p a:hover {
     font-weight: 700;
     color: #333;
     text-shadow: 1px 1px white;
+    text-align: center;
 }
 
 .pastry-price-pastry-page {
@@ -435,6 +461,7 @@ p a:hover {
     font-size: 45px;
     font-weight: 700;
     color: #dc3545;
+    text-align: center;
 }
 
 .pastry-detail-pastry-page {
@@ -446,13 +473,14 @@ p a:hover {
 
 .btn-pastry-page {
     display: inline-block;
-    padding: 3% 15%;
+    padding: 3% 25%;
     background-color: #dc3545;
     color: #fff;
     border-radius: 5px;
-    margin-top: 1%;
+    margin: 13% 1% 1% 12%;
     transition: all 0.3s ease;
     font-weight: bold;
+    font-size: 30px;
 }
 
 .btn-pastry-page:hover {
@@ -505,11 +533,7 @@ p a:hover {
     font-size: 20px;
 }
 
-/* Css end for contact page */
-
-/* Css for pastry-page end */
-
-/* Css for mobile site */
+/* Css for mobile site 768px*/
 @media only screen and (max-width: 768px) {
     .logo {
         width: 45%;
@@ -530,11 +554,11 @@ p a:hover {
     }
 
     .menu ul li {
-        font-size: 25px;
+        font-size: 14px;
         background-color: #dc3545;
         border-radius: 15px;
         margin: 1% 1%;
-        padding: 1% 1% 1% 2%;
+        padding: 2% 1% 2% 2%;
     }
 
     .pastry-search input[type="search"] {
@@ -544,7 +568,6 @@ p a:hover {
     }
 
     .btn {
-        width: 90%;
         padding: 2%;
     }
 
@@ -553,12 +576,12 @@ p a:hover {
     }
 
     .search-results {
-        position: absolute;
-        top: 77%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: 70%;
+        left: -34%;
         z-index: 1;
-        width: 72%;
+        width: 80%;
+        min-height: 50px;
         max-height: 145px;
         overflow-y: auto;
         background-color: white;
@@ -585,7 +608,7 @@ p a:hover {
         font-weight: bold;
         width: 150%;
         /* Adjust this width as needed */
-        color: black;
+        color: #dc3545;
     }
 
     .search-result-item-price {
@@ -594,7 +617,7 @@ p a:hover {
         width: 30%;
         /* Adjust this width as needed */
         text-align: right;
-        color: black;
+        color: #dc3545;
     }
 
     .search-results hr {
@@ -603,7 +626,7 @@ p a:hover {
     }
 
     .search-result-item:hover {
-        background-color: #f19066;
+        background-color: #c4c4c4;
         cursor: pointer;
     }
 
@@ -616,8 +639,8 @@ p a:hover {
     }
 
     .float-text {
-        font-size: 2rem;
-        margin-left: -12%;
+        font-size: 20px;
+        left: 25%;
     }
 
     .float-text:hover {
@@ -625,7 +648,7 @@ p a:hover {
     }
 
     .box-3 {
-        width: 30%;
+        width: 28%;
         margin: 4% 1.5%;
     }
 
@@ -634,11 +657,28 @@ p a:hover {
     }
 
     .pastry-menu-box {
+        display: flex;
+        flex-direction: column;
         width: 97%;
-        padding: 5%;
-        margin-bottom: 5%;
+        padding: 3%;
+        margin-bottom: 7%;
     }
-
+    
+    .pastry-menu-img {
+        width: 55%;
+        margin: 0% 22%;
+    }
+    
+    .pastry-menu-desc {
+        text-align: center;
+    }
+    
+    .pastry-menu-desc .btn {
+        font-size: 22px;
+        margin: 0%;
+        padding: 2% 20%;
+    }
+    
     .pastry-menu-box-pastry-page {
         background-color: #c4c4c4;
         display: flex;
@@ -650,15 +690,15 @@ p a:hover {
 
     .pastry-menu-img-pastry-page {
         float: left;
-        margin-right: 5%;
+        margin: 0% 3% 0% 0%;
         width: 100%;
         overflow: hidden;
         border-radius: 5px;
     }
 
     .pastry-menu-desc-pastry-page h4 {
-        margin: 0 0 1%;
-        font-size: 35px;
+        margin: 0 0 1% 0%;
+        font-size: 30px;
         font-weight: 700;
         color: #333;
         text-shadow: 1px 1px white;
@@ -672,7 +712,7 @@ p a:hover {
     }
 
     .pastry-detail-pastry-page {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.2;
         color: white;
         text-shadow: 1px 1px black;
@@ -680,13 +720,14 @@ p a:hover {
 
     .btn-pastry-page {
         display: inline-block;
-        padding: 7% 27%;
+        padding: 4% 12%;
         background-color: #dc3545;
         color: #fff;
         border-radius: 5px;
         margin-top: 20%;
         transition: all 0.3s ease;
         font-weight: bold;
+        font-size: 30px;
     }
 
     .img-responsive-img-curved-pastry-page {

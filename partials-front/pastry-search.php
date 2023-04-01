@@ -11,12 +11,16 @@
 
     <!-- Script for Search -->
     <script>
-        $(function(){
+        $(document).ready(function() {
+            $('.search-results').hide();
+        });
+
+        $(function() {
             //Variables
             var timer;
 
             //Do something when the user types in the search bar
-            $(".search").keyup(function(){
+            $(".search").keyup(function() {
                 //Clear timer
                 clearTimeout(timer);
 
@@ -24,21 +28,25 @@
                 $(".search-results").html("<p class='success'>Loading...</p>");
 
                 //Set timer and wait 500ms before executing the function
-                timer = setTimeout(function(){
+                timer = setTimeout(function() {
                     //Get the value from the input field
                     var val = $(".search").val();
 
                     //Check if value is empty
-                    if(val != ""){
+                    if (val != "") {
                         //Send ajax request
-                        $.post("ajax/get-search-results.php", {term: val},
-                        function(data){
-                            //Display the results
-                            $(".search-results").html(data);
-                        })
-                    } else{
+                        $.post("ajax/get-search-results.php", {
+                                term: val
+                            },
+                            function(data) {
+                                //Display the results
+                                $(".search-results").show();
+                                $(".search-results").html(data);
+                            })
+                    } else {
                         //Clear the results
                         $(".search-results").html("");
+                        $(".search-results").hide();
                     }
                 }, 100)
             })

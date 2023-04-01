@@ -95,7 +95,7 @@ if (isset($_GET['category_id'])) {
                         </a>
                         <br>
 
-                        <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                        <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order</a>
                     </div>
                 </div>
 

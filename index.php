@@ -120,7 +120,7 @@ require_once('partials-front/pastry-search.php');
                         </a>
                         <br>
 
-                        <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order Now!</a>
+                        <a href="<?php echo SITEURL; ?>order.php?pastry_id=<?php echo $id; ?>" class="btn btn-primary">Order</a>
                     </div>
 
                     <dv class="clearfix"></dv>
