@@ -6,15 +6,15 @@
 
 /* Css for all pages */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 0px auto;
     /* centralize the content */
 }
 
@@ -134,6 +134,7 @@ h3 a:hover {
     width: 10%;
     float: left;
     /* Image ignores borders... Floats in front of other elements */
+    margin: 1% auto;
 }
 
 .logo img {
@@ -164,6 +165,7 @@ h3 a:hover {
     background-color: #dc3545;
     text-shadow: 1px 1px black;
     border-radius: 15px;
+    padding: 1% 1% 1% 1.3%;
 }
 
 .menu ul li:hover {
@@ -394,7 +396,7 @@ p a:hover {
 
 .pastry-menu-box-pastry-page {
     background-color: #c4c4c4;
-    height: 515px;
+    display: flex;
     padding: 2%;
     margin-bottom: 3%;
     border: 1px solid #eee;
@@ -404,7 +406,7 @@ p a:hover {
 .pastry-menu-img-pastry-page {
     float: left;
     margin-right: 14%;
-    width: 38%;
+    width: 30%;
     overflow: hidden;
     border-radius: 5px;
 }
@@ -475,6 +477,10 @@ p a:hover {
         margin: 1% auto;
     }
 
+    .logo img{
+        margin-top: 5%;
+    }
+
     .menu {
         line-height: 50px;
     }
@@ -485,9 +491,10 @@ p a:hover {
 
     .menu ul li {
         font-size: 25px;
-        background-color: #e15f41;
+        background-color: #dc3545;
         border-radius: 15px;
         margin: 1% 1%;
+        padding: 1% 1% 1% 2%;
     }
 
     .pastry-search input[type="search"] {
@@ -570,7 +577,11 @@ p a:hover {
 
     .float-text {
         font-size: 2rem;
-        margin-left: -18%;
+        margin-left: -12%;
+    }
+
+    .float-text:hover {
+        color: #dc3545;
     }
 
     .box-3 {
@@ -586,6 +597,63 @@ p a:hover {
         width: 97%;
         padding: 5%;
         margin-bottom: 5%;
+    }
+
+    .pastry-menu-box-pastry-page {
+        background-color: #c4c4c4;
+        display: flex;
+        padding: 5%;
+        margin-bottom: 3%;
+        border: 1px solid #eee;
+        border-radius: 15px;
+    }
+
+    .pastry-menu-img-pastry-page {
+        float: left;
+        margin-right: 5%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .pastry-menu-desc-pastry-page h4 {
+        margin: 0 0 1%;
+        font-size: 35px;
+        font-weight: 700;
+        color: #333;
+        text-shadow: 1px 1px white;
+    }
+
+    .pastry-price-pastry-page {
+        margin: 0 0 1%;
+        font-size: 35px;
+        font-weight: 700;
+        color: #dc3545;
+    }
+
+    .pastry-detail-pastry-page {
+        font-size: 25px;
+        line-height: 1.2;
+        color: white;
+        text-shadow: 1px 1px black;
+    }
+
+    .btn-pastry-page {
+        display: inline-block;
+        padding: 7% 27%;
+        background-color: #dc3545;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 20%;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    .img-responsive-img-curved-pastry-page {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
     }
 
     .social {
