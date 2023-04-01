@@ -393,11 +393,12 @@ p a:hover {
 }
 
 .pastry-menu-box-pastry-page {
-    background-color: #fff;
+    background-color: #c4c4c4;
     height: 515px;
     padding: 2%;
     margin-bottom: 3%;
     border: 1px solid #eee;
+    border-radius: 15px;
 }
 
 .pastry-menu-img-pastry-page {
@@ -424,6 +425,7 @@ p a:hover {
     font-size: 45px;
     font-weight: 700;
     color: #333;
+    text-shadow: 1px 1px white;
 }
 
 .pastry-price-pastry-page {
@@ -436,7 +438,8 @@ p a:hover {
 .pastry-detail-pastry-page {
     font-size: 30px;
     line-height: 1.2;
-    color: #777;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .btn-pastry-page {
@@ -447,6 +450,7 @@ p a:hover {
     border-radius: 5px;
     margin-top: 1%;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .btn-pastry-page:hover {
