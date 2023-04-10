@@ -33,7 +33,7 @@ include('partials-back/nav.php');
             ?>
             <h1><?php echo $count; ?></h1>
             <br>
-            <a href="<?php echo SITEURL; ?>admin/manage-category.php"><b>Categories</b></a>
+            <a href="<?php echo SITEURL; ?>backend/manage-category.php"><b>Categories</b></a>
         </div>
 
         <div class="col-4 text-center">
@@ -52,7 +52,7 @@ include('partials-back/nav.php');
             ?>
             <h1><?php echo $count; ?></h1>
             <br>
-            <a href="<?php echo SITEURL; ?>admin/manage-pastry.php"><b>Pastries</b></a>
+            <a href="<?php echo SITEURL; ?>backend/manage-pastry.php"><b>Pastries</b></a>
         </div>
 
         <div class="col-4 text-center">
@@ -71,7 +71,7 @@ include('partials-back/nav.php');
             ?>
             <h1><?php echo $count; ?></h1>
             <br>
-            <a href="<?php echo SITEURL; ?>admin/manage-order.php"><b>Orders</b></a>
+            <a href="<?php echo SITEURL; ?>backend/manage-order.php"><b>Orders</b></a>
         </div>
 
         <div class="col-4 text-center">
@@ -93,7 +93,7 @@ include('partials-back/nav.php');
             ?>
             <h1>€<?php echo $total; ?></h1>
             <br>
-            <a href="<?php echo SITEURL; ?>admin/manage-order.php"><b>Sales</b></a>
+            <a href="<?php echo SITEURL; ?>backend/manage-order.php"><b>Sales</b></a>
         </div>
 
         <div class="clearfix"></div>

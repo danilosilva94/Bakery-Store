@@ -42,6 +42,9 @@
                     <li>
                         <a href="<?php echo SITEURL; ?>contact.php">Contact</a>
                     </li>
+                    <li>
+                        <a href="<?php echo SITEURL; ?>backend/index.php">Admin Panel</a>
+                    </li>
                 </ul>
             </div>
             <!-- Prevents the menu from overlapping the search bar -->
